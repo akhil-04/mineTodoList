@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <script src="https://kit.fontawesome.com/22748096c7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <div id="todo-container">
+            <h1 id="heading-h1">ToDo App</h1>
+            
+            <form action="/create-task" method="POST">
+                 <!-- TASK DESCRIPTION INPUT -->
+            <div class="description-input">
+                <h4 class="heading-h4">DESCRIPTION</h4>
+                <input type="text" name="description" placeholder="What do you need to do?" id="taskDescription" class="small" required>
+            </div>
+            
+             <!-- CATEGORY and DATE INPUT -->
+             <div class="category-date">
+                <div class="category">
+                    <h4 class="heading-h4">CATEGORY</h4>
+                    <select name="category" id="category" required>
+                        <option disabled selected value="">Choose a category</option>
+                        <option value="college">College</option>
+                        <option value="personal">Personal</option>
+                        <option value="home">Home</option>
+                    </select>
+                </div>
+                
+                <div class="date">
+                    <h4 class="heading-h4">DUE DATE</h4>
+                    <input type="date" name="date" class="small" class="small" required> 
+                </div>
+               
+            </div>
+           
+             <!-- ADD and DELETE BUTTONS -->
+             <div class="add-delete-button">
+                <button type="submit" id="add-button"><i class="fas fa-plus mr20px"></i> ADD TASK</button>
+                
+            </div>
+        </form>
+        <!-- <a id="delete-button" href=""><i class="far fa-trash-alt mr20px"></i> DELETE TASK</a> -->
+        <!-- </div> -->
+        <div id="todo">
+            <ul>
+                <% for(let i of tasks){ %>
+                <li class="toli" style="list-style:none">
+                      <!-- checkbox list  -->
+                      <input type="checkbox" name="<%= i.id %>" style="cursor: pointer; margin-top: 3vh;"  >
+                    <div class="details">
+                        <p><%= i.description %></p>
+                        <p> <i class="far fa-calendar-alt"></i> <%= i.date %></p>
+                        <p><%= i.category %></p>
+                    </div>
+                    <div class="delete-btnn">
+                    <a id="delete-button" href="/delete-task/?id=<%=i._id%>"><i class="far fa-trash-alt mr20px"></i> DELETE TASK</a>
+                </div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    </body>
+</html>

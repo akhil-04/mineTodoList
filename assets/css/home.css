@@ -1,0 +1,133 @@
+/* body */
+body{
+    background-color: lightgray;
+}
+
+/* todo container */
+#todo-container{
+    width: 50vw;
+    height: auto;
+    max-height: 100vh;
+    min-height: 60vh;
+    min-width: 500px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: sans-serif;
+    background-color:white;
+}
+
+form{
+    height: 40vh;
+    width: 100%;
+}
+
+#heading-h1{
+    text-align: center;
+}
+
+.heading-h4{
+    margin-left: 10px;
+    color: #6A7688;
+}
+.small{
+    margin-left: 10px;
+}
+#taskDescription{
+    margin-top: -25px;
+}
+.description-input{
+    height: 10vh;
+    border-top: 1.5px solid white;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.description-input input{
+    outline: none;
+    height: 50%;
+    width: 98%;
+    border: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: black;
+}
+
+.category-date{
+    height: 10vh;
+    display: flex;
+    border-top: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    background-color: transparent;
+}
+
+.category{
+    width: 49%;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+}
+
+.category select{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+.date{
+    width: 49%;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+}
+
+.date input{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.add-delete-button{
+    height: 20vh;
+    box-sizing: border-box;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.add-delete-button #add-button{
+    background-color: #2e3630;
+    width: 31%;
+    height: 8vh;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#delete-button{
+    display: flex;
+    background-color: darkred;
+    width: 31%;
+    height: 8vh;
+    color: white;
+    font-size: 1rem;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    justify-content: center;
+    border-radius: 8px;
+}
+.mr20px{
+    margin-right: 20px;
+}
